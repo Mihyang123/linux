@@ -1,0 +1,15 @@
+-- 모든 하위 경로에서 파일을 찾음
+find /* -name '파일명' 
+
+-- mysql 로그정리
+(1) /var/log/mysqld.log
+	1) 어떤 유저가 접근했는지 알 수 있음
+
+(2) /var/lib/mysql/mysqld.log
+	1) 어떤 유저가 접근했는지 알 수 있음
+
+---> (1)과 (2) 둘 중의 하나의 경로가 원 경로인 듯
+
+(3) /home/mysql/var/lib/mysql/mysqld.log
+	1) 직접 이 경로로 설치한 듯
+

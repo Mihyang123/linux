@@ -1,0 +1,25 @@
+1. pm2 설치
+npm install pm2 -g
+yarn add pm2 -g
+
+-------------------------------
+해당 프로젝트 경로로 가야함
+-------------------------------
+
+2. 프로젝트 빌드
+npm run build
+yarn build
+
+3. pm2 start npm --name "projectName" -- start
+
+4. 작동여부 확인
+pm2 list
+
+pm2 kill
+pm2 stop number
+
+
+  418  pm2 start --name "statistics-admin" npm -- start
+  419  pm2 list
+  420  exit
+  421  ps -ef | grep node

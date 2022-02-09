@@ -1,0 +1,23 @@
+파일배포 용어 
+
+1. 
+tomcat 폴더 안 프로젝트 하나만 멈출 수 있음
+./front stop
+
+2. 
+tomcat 폴더 안 프로젝트 하나만 시작할 수 있음
+./front starts
+
+3. 
+war파일을 수동으로 배포시킴
+jar xvf front.war
+
+4. 
+경로 안에 있는 모든 파일을 삭제시킴
+rm -rf *
+
+5.
+경로 안에 있는 파일을  tar로 압축한다.
+tar -cvf webapps.tar webapps/
+ 
+

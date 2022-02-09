@@ -1,0 +1,37 @@
+[firewalld 방화벽 설정]
+
+* 설정은 root로 하는 것이 좋다. ( 다른 계정에 권한을 주지않는게 좋을 것 같다. ) *
+* 설정 경로		: /etc/firewalld/zones/public.xml *
+
+1. 설치
+(1) CentOs
+	1) yum install -y firewalld
+
+(2) Ubuntu
+	1) sudo apt update && sudo apt install firewalld -y
+
+2. 버전 확인
+(1) (sudo) firewall-cmd --version
+
+3. 목록 확인
+(2) 전체
+	1) firewall-cmd --list-all 
+
+4. 상태확인 
+(1) systemctl status firewalld
+(2) firewall-cmd --status
+
+5. 추가
+(1) 예시 : 80포트를 지속적으로 유지시켜 오픈할 때
+	1) firewall-cmd --zone=public --permanent --add-port=80/tcp
+(2) 예시 : 192.168.10.* 모든 아이피를 지속적으로 유지시켜 접근하게하고 싶을 때
+	1) firewall-cmd --permanent --add-source=192.168.10.0/24
+6. 제거
+(1) 예시 : 8080포트를 지속적으로 제거할 때
+	1) firewall-cmd --zone=public --permanent --remove-port=8080/tcp
+(2) 예시 : 192.168.10.* 모든 아이피를 지속적으로 제거하고 싶을 때
+	1) firewall-cmd --permanent --remove-source=192.168.10.0/24
+
+7. 리스타트
+(1) systemctl restart firewalld
+(2) firewall-cmd --reload
